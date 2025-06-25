@@ -31,16 +31,32 @@ async def handle_request(request: Request):
     intent_handler_dict = {
         'order.add - context: ongoing-order': add_to_order,
         # 'order.remove - context: ongoing-order': remove_from_order,
-        # 'order.complete - context: ongoing-order': complete_order,
-        'track.order - context: ongoing-tracking': track_order
+        'Order_complete': complete_order,
+        'Track_order Context:ongoing-order': track_order
     }
     #
     return intent_handler_dict[intent](parameters, session_id)
 
 
 
+def save_to_db(order: dict):
+    next_order_id = db_helper.get_next_order_id()
 
+    # Insert individual items along with quantity in orders table
+    for food_item, quantity in order.items():
+        rcode = db_helper.insert_order_item(
+            food_item,
+            quantity,
+            next_order_id
+        )
 
+        if rcode == -1:
+            return -1
+
+    # Now insert order tracking status
+    db_helper.insert_order_tracking(next_order_id, "in progress")
+
+    return next_order_id
 
 
 
@@ -80,8 +96,27 @@ def add_to_order(Parameters:dict,session_id: str):
 
 
 
+def complete_order(parameters: dict, session_id: str):
+    if session_id not in inprogress_orders:
+        fulfillment_text = "I'm having a trouble finding your order. Sorry! Can you place a new order please?"
+    else:
+        order = inprogress_orders[session_id]
+        order_id = save_to_db(order)
+        if order_id == -1:
+            fulfillment_text = "Sorry, I couldn't process your order due to a backend error. " \
+                               "Please place a new order again"
+        else:
+            order_total = db_helper.get_total_order_price(order_id)
 
+            fulfillment_text = f"Awesome. We have placed your order. " \
+                           f"Here is your order id # {order_id}. " \
+                           f"Your order total is {order_total} which you can pay at the time of delivery!"
 
+        del inprogress_orders[session_id]
+
+    return JSONResponse(content={
+        "fulfillmentText": fulfillment_text
+    })
 
 
 
