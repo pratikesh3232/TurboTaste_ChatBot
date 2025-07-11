@@ -1,2 +1,2 @@
 # honey_ChatBot
-tHis is Chat bot for Showing Skills for NLP 
+tHis is Chat bot for Showing Skills for NLP
