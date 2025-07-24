@@ -1,4 +1,4 @@
-# TurboTaste Order Chatbot Backend
+# TurboTaste Chatbot
 
 **TurboTaste** Order Bot is the backend logic for a Dialogflow-powered virtual assistant that helps users place, modify, track, and cancel fast food orders in real-time. The bot uses a FastAPI application that connects to your fast food business database.
 
