@@ -2,7 +2,7 @@
 
 **TurboTaste** Order Bot is the backend logic for a Dialogflow-powered virtual assistant that helps users place, modify, track, and cancel fast food orders in real-time. The bot uses a FastAPI application that connects to your fast food business database.
 
-## 🚀 Features
+##  Features
 
 - Add, remove, or cancel items in an order
 - Track order status via order ID
@@ -11,7 +11,7 @@
 - Rich responses compatible with Dialogflow Messenger
 - Extensible and modular code structure
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 project/
@@ -30,7 +30,7 @@ project/
 - **genric_helper.py** – Helper functions (session ID, formatting, etc.)
 - **requirements.txt** – Python dependencies
 
-## ⚡ Setup & Run Locally
+## Setup & Run Locally
 
 1. **Clone the repository**
     ```bash
@@ -57,7 +57,7 @@ project/
 5. **Link to Dialogflow Webhook**
     - In Dialogflow Console, use your running endpoint (e.g., `http://localhost:8000/` or your deployed URL) as the webhook for fulfillment.
 
-## 🖥️ API Overview
+## 🖥API Overview
 
 **POST /**
 
@@ -69,28 +69,8 @@ Handles these intents:
 - Track Order
 - Cancel Order
 
-## 📦 Example Webhook Request
 
-```json
-{
-  "queryResult": {
-    "intent": {
-      "displayName": "order.add - context: ongoing-order"
-    },
-    "parameters": {
-      "Food_item": ["Pizza", "Samosa"],
-      "number1": [1, 2]
-    },
-    "outputContexts": [
-      {
-        "name": "projects/project-id/agent/sessions/session-id/contexts/ongoing-order"
-      }
-    ]
-  }
-}
-```
-
-## 🧩 Customization
+## Customization
 
 - Add menu validation, allergy warnings, promo codes, or payment links.
 - Adjust intent-handler mapping in `main.py` for new flow.
@@ -106,33 +86,12 @@ Add screenshots of your app in action here for a visual overview.
 |-----------------------------------------------|-------------------------------------------------------|
 | ![Chatbot Screenshot](screenshots/chatbot_mained](screenshots/order_confirmTip: Place your screenshot images in a **screenshots/** folder at the root of your project and reference them here._
 
-## 📝 Requirements
+## Requirements
 
-To export your current Python environment requirements:
 
-```bash
-pip freeze > requirements.txt
-```
 
-Or, manually keep only the essentials (for example):
-
-```
-fastapi
-uvicorn
-# plus your DB driver (e.g. psycopg2, mysql-connector-python, etc.)
-```
-
-## 🤖 Credits
+## Credits
 
 - [FastAPI](https://fastapi.tiangolo.com/) framework
 - [Dialogflow](https://dialogflow.cloud.google.com/) for NLU and conversation flow
 - See `db_helper.py` and `genric_helper.py` for business logic customizations
-
-## 📃 License
-
-MIT License.  
-Feel free to use, modify and contribute!
-
-**Happy ordering! 🍕🥤**
-
-> If you want to expand this README (Contributing, Contact, etc.) or have further customization requests, just let me know!
