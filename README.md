@@ -9,7 +9,7 @@
 - Complete orders and store them in the database
 - Session-based order management
 - Rich responses compatible with Dialogflow Messenger
-- Extensible and modular code structure
+- modular code structure
 
 ##  Project Structure
 
@@ -20,8 +20,6 @@ project/
 ├── genric_helper.py
 ├── requirements.txt
 ├── screenshots/
-│   ├── chatbot_main.png
-│   └── order_confirmed.png
 └── README.md
 ```
 
@@ -30,32 +28,6 @@ project/
 - **genric_helper.py** – Helper functions (session ID, formatting, etc.)
 - **requirements.txt** – Python dependencies
 
-## Setup & Run Locally
-
-1. **Clone the repository**
-    ```bash
-    git clone https://github.com/yourusername/turbotaste-chatbot-backend.git
-    cd turbotaste-chatbot-backend
-    ```
-
-2. **Install dependencies**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
-    # Or generate requirements.txt as explained below
-    ```
-
-3. **Configure**  
-   Edit `db_helper.py` with your database details.
-
-4. **Run the FastAPI app**
-    ```bash
-    uvicorn main:app --reload
-    ```
-
-5. **Link to Dialogflow Webhook**
-    - In Dialogflow Console, use your running endpoint (e.g., `http://localhost:8000/` or your deployed URL) as the webhook for fulfillment.
 
 ## 🖥API Overview
 
@@ -89,6 +61,31 @@ Add screenshots of your app in action here for a visual overview.
 ## Requirements
 
 
+## Setup & Run Locally
+
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/turbotaste-chatbot-backend.git
+    cd turbotaste-chatbot-backend
+    ```
+
+2. **Install dependencies**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    ```
+
+3. **Configure**  
+   Edit `db_helper.py` with your database details.
+
+4. **Run the FastAPI app**
+    ```bash
+    uvicorn main:app --reload
+    ```
+
+5. **Link to Dialogflow Webhook**
+    - In Dialogflow Console, use your running endpoint (e.g., `http://localhost:8000/` or your deployed URL) as the webhook for fulfillment.
 
 ## Credits
 
