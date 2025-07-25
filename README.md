@@ -46,17 +46,11 @@ Handles these intents:
 - Adjust intent-handler mapping in `main.py` for new flow.
 - Refine `db_helper.py` for your preferred database (MySQL, PostgreSQL, SQLite, etc).
 
-## 📸 Screenshots
+## Screenshots
 
-Add screenshots of your app in action here for a visual overview.
+![Chatbot Conversation](Screenshots/s1.PNG) | ![Order Confirmation](Screenshots/Order_confirm.PNG)  |
 
-| Dialogflow Messenger Chat Interface      | Order Confirmation Message                 |
-|------------------------------------------|--------------------------------------------|
-| ![Chatbot Conversation](Screenshots/s1.PNG) | ![Order Confirmation](screenshots/Order_confirm.jpg)  |
-
-| User Adding Items to Order               | Current Order Summary                      |
-|------------------------------------------|--------------------------------------------|
-| ![Adding to Order](screenshots/s2.jpg)      | ![Order Summary](screenshots/order1.jpg)       |
+| ![Adding to Order](Screenshots/s2.PNG)      | ![Order Summary](Screenshots/order1.PNG)       |
 
 
 ## Requirements
