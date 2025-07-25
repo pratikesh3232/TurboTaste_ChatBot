@@ -38,6 +38,7 @@ Handles these intents:
 - Complete Order
 - Track Order
 - Cancel Order
+- Show Menu
 
 
 ## Screenshots
