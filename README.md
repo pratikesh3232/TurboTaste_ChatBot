@@ -48,19 +48,28 @@ Handles these intents:
 
 ## Screenshots
 
+    **Welcome Screen**
 ![Chatbot Conversation](Screenshots/s1.PNG) 
 
+
+    **Order Confirmation**
 ![Order Confirmation](Screenshots/Order_confirm.PNG)
 
+
+    **Tracking Order**
 ![Adding to Order](Screenshots/s2.PNG)
 
+
+    **Tracking Order**    
 ![Order Summary](Screenshots/order1.PNG)
 
-![Order Summary](Screenshots/order.PNG)
 
+    **Removing item from order**
 ![Order Summary](Screenshots/Remove.PNG)
 
-![Order Summary](Screenshots/track_order.PNG)
+
+    **Tracking Order**
+![Order Summary](Screenshots/Track_order.PNG)
 
 
 
