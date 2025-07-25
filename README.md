@@ -54,7 +54,8 @@ Add screenshots of your app in action here for a visual overview.
 
 | Dialogflow Messenger Integration              | Order Confirmed Response                              |
 |-----------------------------------------------|-------------------------------------------------------|
-| ![Chatbot Screenshot](screenshots/s1](screenshots/order_confirmTip: Place your screenshot images in a **screenshots/** folder at the root of your project and reference them here._
+| ![Chatbot Screenshot](screenshots/s1.png
+](screenshots/s1.png)
 
 ## Requirements
 
