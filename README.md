@@ -54,8 +54,7 @@ Add screenshots of your app in action here for a visual overview.
 
 | Dialogflow Messenger Integration              | Order Confirmed Response                              |
 |-----------------------------------------------|-------------------------------------------------------|
-| ![Chatbot Screenshot](screenshots/s1.png
-](screenshots/s1.png)
+| ![Chatbot Screenshot](Screenshots/s1.png](screenshots/s1.png)
 
 ## Requirements
 
