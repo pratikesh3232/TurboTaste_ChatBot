@@ -91,12 +91,19 @@ Handles these intents:
 ## Requirements
 
 Python==3.13
+
 fastapi==0.115.12
+
 fastapi-cli==0.0.7
+
 email_validator==2.2.0
+
 Jinja2==3.1.6
+
 mysql-connector-python==9.3.0
+
 uvicorn==0.34.3
+
 
 ## Setup & Run Locally
 
