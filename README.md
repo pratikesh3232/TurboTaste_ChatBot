@@ -40,91 +40,36 @@ Handles these intents:
 - Cancel Order
 
 
-## Customization
-
-- Add menu validation, allergy warnings, promo codes, or payment links.
-- Adjust intent-handler mapping in `main.py` for new flow.
-- Refine `db_helper.py` for your preferred database (MySQL, PostgreSQL, SQLite, etc).
-
 ## Screenshots
 
-    **Welcome Screen**
+   **Starting Page**
+![Chatbot Conversation](Screenshots/starting_page.png)
+
+
+   **Welcome Screen**
 ![Chatbot Conversation](Screenshots/s1.PNG) 
 
 
-    **Order Confirmation**
+   **Order Confirmation**
 ![Order Confirmation](Screenshots/Order_confirm.PNG)
 
 
-    **Tracking Order**
+   **Tracking Order**
 ![Adding to Order](Screenshots/s2.PNG)
 
 
-    **Adding Extra Items**    
+   **Adding Extra Items**    
 ![Order Summary](Screenshots/order1.PNG)
 
 
-    **Removing item from order**
+   **Removing item from order**
 ![Order Summary](Screenshots/Remove.PNG)
 
 
-    **Tracking Order**
+   **Tracking Order**
 ![Order Summary](Screenshots/Track_order.PNG)
 
 
-## Code Snippet
-   **Adding Order**
-   ```
-def add_to_order(parameters: dict, session_id: str):
-    Food_item    = parameters['Food_item']
-    quantity = parameters['number1']
-
-    # Check if the length of food items and quantities match
-    # If they don't match, return an error message
-    if len(Food_item) != len(quantity):
-        fulfillment_text = "Sorry I didn't understand. Can you please specify food items and quantities clearly?"
-    else:
-        new_food_dict = dict(zip(Food_item, quantity))
-
-        # If the session ID is not in in-progress orders, create a new order
-        # If the session ID is already in in-progress orders, update the existing order
-        if session_id in inprogress_orders:
-            current_food_dict = inprogress_orders[session_id]
-            current_food_dict.update(new_food_dict)
-            inprogress_orders[session_id] = current_food_dict
-        else:
-            inprogress_orders[session_id] = new_food_dict
-    # Generate a string representation of the current order
-        order_str = genric_helper.get_str_from_food_dict(inprogress_orders[session_id])
-        fulfillment_text = f"So far you have: {order_str}. Do you need anything else?"
-
-
-    return JSONResponse(content={
-    "fulfillmentMessages": [
-        {
-            "payload": {
-                "richContent": [
-                    [
-                        {
-                            "type": "info",
-                            "title": "Current Order",
-                            "subtitle": fulfillment_text
-                        },
-                        {
-                            "type": "chips",
-                            "options": [
-                                {"text": "Cancel Order"}
-                            ]
-                        }
-                    ]
-                ]
-            }
-        }
-    ]
-})
-```
-
-   
 
 ## Requirements
 
