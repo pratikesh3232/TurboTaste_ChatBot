@@ -50,11 +50,14 @@ Handles these intents:
 
 Add screenshots of your app in action here for a visual overview.
 
-### Example
+| Dialogflow Messenger Chat Interface      | Order Confirmation Message                 |
+|------------------------------------------|--------------------------------------------|
+| ![Chatbot Conversation](Screenshots/s1.jpg) | ![Order Confirmation](screenshots/Order_confirm.jpg)  |
 
-| Dialogflow Messenger Integration              | Order Confirmed Response                              |
-|-----------------------------------------------|-------------------------------------------------------|
-| ![Chatbot Screenshot](Screenshots/s1.png](screenshots/s1.png)
+| User Adding Items to Order               | Current Order Summary                      |
+|------------------------------------------|--------------------------------------------|
+| ![Adding to Order](screenshots/s2.jpg)      | ![Order Summary](screenshots/order1.jpg)       |
+
 
 ## Requirements
 
