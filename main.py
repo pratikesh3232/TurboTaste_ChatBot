@@ -61,40 +61,6 @@ def save_to_db(order: dict):
 
 
 
-# Function to save the order to the database
-# def add_to_order(Parameters:dict,session_id: str):
-#     food_item = Parameters['Food_item']
-#     quantity = Parameters['number1']
-
-
-#     if len(food_item) != len(quantity):
-#         fulfillment_text = "Sorry I didn't understand. Can you please specify food items and quantities clearly?"
-#     else:
-#         new_food_dict = dict(zip(food_item, quantity))
-
-
-#     if session_id not in inprogress_orders:
-#         inprogress_orders[session_id] = new_food_dict
-#     else:
-#         # If the session already exists, update the existing order
-#         current_food_dict = inprogress_orders[session_id]
-#         for key, value in new_food_dict.items():
-#             if key in current_food_dict:
-#                 current_food_dict[key] += value
-#             else:
-#                 current_food_dict[key] = value
-#         inprogress_orders[session_id] = current_food_dict
-
-
-
-#     order_str = genric_helper.get_str_from_food_dict(inprogress_orders[session_id])
-#     fulfillment_text = f"So far you have: {order_str}. Do you need anything else?"
-
-
-#     return JSONResponse(content={
-#         "fulfillmentText": fulfillment_text
-#     })
-
 def add_to_order(parameters: dict, session_id: str):
     Food_item    = parameters['Food_item']
     quantity = parameters['number1']
@@ -128,7 +94,7 @@ def add_to_order(parameters: dict, session_id: str):
                     [
                         {
                             "type": "info",
-                            "title": "🛒 Current Order",
+                            "title": "Current Order",
                             "subtitle": fulfillment_text
                         },
                         {
@@ -155,7 +121,7 @@ def complete_order(parameters: dict, session_id: str):
                             [
                                 {
                                     "type": "info",
-                                    "title": "⚠️ No Order Found",
+                                    "title": "No Order Found",
                                     "subtitle": "I'm having trouble finding your order. Can you place a new one, please?"
                                 },
                                 {
@@ -176,7 +142,7 @@ def complete_order(parameters: dict, session_id: str):
     order_id = save_to_db(order)
 
     if order_id == -1:
-        message = "❌ Sorry, we couldn’t process your order due to a backend error.\nPlease place a new order again."
+        message = " Sorry, we couldn’t process your order due to a backend error.\nPlease place a new order again."
         rich_response = [
             {
                 "type": "info",
@@ -193,11 +159,11 @@ def complete_order(parameters: dict, session_id: str):
         ]
     else:
         order_total = db_helper.get_total_order_price(order_id)
-        message = f"✅ Awesome! We have placed your order.\n\n🧾 Order ID: #{order_id}\n💰 Total: ${order_total}\n\nPlease pay at the time of delivery."
+        message = f"Awesome! We have placed your order.\n\n Order ID: #{order_id}\n Total: ${order_total}\n\nPlease pay at the time of delivery."
         rich_response = [
             {
                 "type": "info",
-                "title": "🎉 Order Confirmed",
+                "title": "Order Confirmed",
                 "subtitle": message
             },
             {
@@ -247,7 +213,7 @@ def  track_order( parameters: dict,session_id: str):
                     [
                         {
                             "type": "info",
-                            "title": "📦 Track Your Order",
+                            "title": "Track Your Order",
                             "subtitle":f"The order status for order id: {order_id} is: {order_status}"
                         },
                         {
@@ -357,7 +323,7 @@ def cancel_order(parameters: dict,session_id: str):
                         [
                             {
                                 "type": "info",
-                                "title": "❌ Cant Find Order",
+                                "title": "Cant Find Order",
                                 "subtitle": "I'm having trouble finding your order. Sorry! Can you place a new order instead?"
                             },
                             {
@@ -390,7 +356,7 @@ def cancel_order(parameters: dict,session_id: str):
                         [
                             {
                                 "type": "info",
-                                "title": "❌ Order Cancelled",
+                                "title": "Order Cancelled",
                                 "subtitle": "Your entire order has been cancelled. Let me know if you’d like to start a new one."
                             },
                             {
@@ -406,3 +372,17 @@ def cancel_order(parameters: dict,session_id: str):
             }
         ]
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
