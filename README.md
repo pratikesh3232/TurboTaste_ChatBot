@@ -48,9 +48,21 @@ Handles these intents:
 
 ## Screenshots
 
-![Chatbot Conversation](Screenshots/s1.PNG) | ![Order Confirmation](Screenshots/Order_confirm.PNG)  |
+![Chatbot Conversation](Screenshots/s1.PNG) 
 
-| ![Adding to Order](Screenshots/s2.PNG)      | ![Order Summary](Screenshots/order1.PNG)       |
+![Order Confirmation](Screenshots/Order_confirm.PNG)
+
+![Adding to Order](Screenshots/s2.PNG)
+
+![Order Summary](Screenshots/order1.PNG)
+
+![Order Summary](Screenshots/order.PNG)
+
+![Order Summary](Screenshots/Remove.PNG)
+
+![Order Summary](Screenshots/track_order.PNG)
+
+
 
 
 ## Requirements
