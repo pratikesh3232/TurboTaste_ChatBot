@@ -29,9 +29,7 @@ project/
 - **requirements.txt** – Python dependencies
 
 
-## 🖥API Overview
-
-**POST /**
+## Overview
 
 Expects Dialogflow webhook JSON payload.  
 Handles these intents:
@@ -56,7 +54,7 @@ Add screenshots of your app in action here for a visual overview.
 
 | Dialogflow Messenger Integration              | Order Confirmed Response                              |
 |-----------------------------------------------|-------------------------------------------------------|
-| ![Chatbot Screenshot](screenshots/chatbot_mained](screenshots/order_confirmTip: Place your screenshot images in a **screenshots/** folder at the root of your project and reference them here._
+| ![Chatbot Screenshot](screenshots/s1](screenshots/order_confirmTip: Place your screenshot images in a **screenshots/** folder at the root of your project and reference them here._
 
 ## Requirements
 
