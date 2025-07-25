@@ -52,7 +52,7 @@ Add screenshots of your app in action here for a visual overview.
 
 | Dialogflow Messenger Chat Interface      | Order Confirmation Message                 |
 |------------------------------------------|--------------------------------------------|
-| ![Chatbot Conversation](Screenshots/s1.jpg) | ![Order Confirmation](screenshots/Order_confirm.jpg)  |
+| ![Chatbot Conversation](Screenshots/s1.png) | ![Order Confirmation](screenshots/Order_confirm.jpg)  |
 
 | User Adding Items to Order               | Current Order Summary                      |
 |------------------------------------------|--------------------------------------------|
