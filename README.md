@@ -136,3 +136,5 @@ uvicorn==0.34.3
 - [FastAPI](https://fastapi.tiangolo.com/) framework
 - [Dialogflow](https://dialogflow.cloud.google.com/) for NLU and conversation flow
 - See `db_helper.py` and `genric_helper.py` for business logic customizations
+- Special thanks to the [Codebasics YouTube channel](https://www.youtube.com/c/codebasics) for their clear tutorials and guidance—many of the concepts and practices in this project were learned from their excellent content.
+
