@@ -47,10 +47,16 @@ Handles these intents:
 
 
    **Welcome Screen**
+
+   
 ![Chatbot Conversation](Screenshots/s1.PNG) 
 
 
    **Order Confirmation**
+
+
+
+   
 ![Order Confirmation](Screenshots/Order_confirm.PNG)
 
 
